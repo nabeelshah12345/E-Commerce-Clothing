@@ -241,7 +241,7 @@ function proceedToCheckout() {
         return sum + price * item.qty;
     }, 0);
     alert(`Proceeding to checkout. Total amount: Rs. ${total.toLocaleString()}\n\nThank you for shopping with BAIRAN!`);
-   
+
 }
 
 // Show toast notification

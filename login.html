@@ -52,39 +52,39 @@
         </div>
     </div>
     <!-- Product Modal -->
-<div id="productModal" class="modal-overlay" onclick="closeModal(event)">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModalBtn()">✕</button>
-        <div class="modal-img">
-            <img id="modalImg" src="" alt="">
-        </div>
-        <div class="modal-details">
-            <h4>BAIRAN</h4>
-            <h3 id="modalName"></h3>
-            <div id="modalPrice" class="modal-price"></div>
-            <div class="quantity-control">
-                <button onclick="changeQty(-1)">−</button>
-                <span id="qtyDisplay">1</span>
-                <button onclick="changeQty(1)">+</button>
+    <div id="productModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModalBtn()">✕</button>
+            <div class="modal-img">
+                <img id="modalImg" src="" alt="">
             </div>
-            <button class="modal-add-btn" onclick="addToCart()">Add to Cart</button>
+            <div class="modal-details">
+                <h4>BAIRAN</h4>
+                <h3 id="modalName"></h3>
+                <div id="modalPrice" class="modal-price"></div>
+                <div class="quantity-control">
+                    <button onclick="changeQty(-1)">−</button>
+                    <span id="qtyDisplay">1</span>
+                    <button onclick="changeQty(1)">+</button>
+                </div>
+                <button class="modal-add-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Cart Sidebar -->
-<div id="cartSidebar" class="cart-sidebar">
-    <div class="cart-header">
-        <h3>Your Cart</h3>
-        <button onclick="toggleCart()">✕</button>
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="toggleCart()">✕</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div id="cartTotal" class="cart-total"></div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
     </div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-footer">
-        <div id="cartTotal" class="cart-total"></div>
-         <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
-    </div>
-</div>
-<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
 
 
 </body>

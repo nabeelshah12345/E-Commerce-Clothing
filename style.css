@@ -1781,23 +1781,31 @@ html {
 
 /* Login & Signup Responsive Fixes */
 @media (max-width: 768px) {
-    .containerlogin, .containersignup {
-        width: 90vw; /* Fixed width ki jagah percentage use kiya */
-        height: auto; /* Height auto taake content fit ho sake */
+
+    .containerlogin,
+    .containersignup {
+        width: 90vw;
+        /* Fixed width ki jagah percentage use kiya */
+        height: auto;
+        /* Height auto taake content fit ho sake */
         padding: 20px;
         margin: 20px auto;
     }
 
     .log h1 {
-        font-size: 32px; /* Mobile par heading choti kar di */
+        font-size: 32px;
+        /* Mobile par heading choti kar di */
     }
 
-    .mail, .pass {
-        padding: 10px; /* Input areas ko touch-friendly banaya */
+    .mail,
+    .pass {
+        padding: 10px;
+        /* Input areas ko touch-friendly banaya */
         width: 100%;
     }
 
-    .mail input, .pass input {
+    .mail input,
+    .pass input {
         width: 100%;
     }
 
@@ -1809,19 +1817,23 @@ html {
     }
 
     .remember span {
-        margin-left: 0; /* Margin reset kiya mobile ke liye */
+        margin-left: 0;
+        /* Margin reset kiya mobile ke liye */
     }
 
     .loginhome a {
-        margin-left: 20px; /* Nav link alignment */
+        margin-left: 20px;
+        /* Nav link alignment */
     }
 }
 
 @media (max-width: 480px) {
-    .containerlogin, .containersignup {
+
+    .containerlogin,
+    .containersignup {
         width: 95vw;
     }
-    
+
     .loginbutton button {
         width: 100%;
         font-size: 20px;
