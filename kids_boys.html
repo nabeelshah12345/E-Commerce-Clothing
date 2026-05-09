@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAIRAN - Kids Boys Collection</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="img">
+            <img src="/logo/BAIRAN-removebg-preview.png" width="200px" alt="BAIRAN Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="/men.html">Men</a></li>
+            <li><a href="/women.html">Women</a></li>
+            <li><a href="/kids_girls.html">Kids Girls</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search Products">
+            <button class="search-btn" onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cart" onclick="toggleCart()">
+            <img src="/icons/5163709.png" width="35px" alt="Cart Icon">
+            <span id="cartCount" class="cart-count">0</span>
+        </div>
+        <div class="login">
+            <a href="/login.html"><button id="loginid">Login</button></a>
+        </div>
+        <div class="Signup">
+            <a href="/signup.html"><button id="signupid">Sign Up</button></a>
+        </div>
+        <div id="logoutDiv">
+            <button id="logoutClick">Logout</button>
+        </div>
+    </div>
+    <section class="boyskids">
+        <div class="bigContainer">
+            <h1>Kids Boys Collection</h1>
+            <p>Explore our collection of kids boys fashion. From casual to formal, we have got you covered. </p>
+        </div>
+        <div class="Products">
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/1.jpg" alt="pic1">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Navy Kids Jacket Set</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/2.png" alt="pic2">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Black Kids Sherwani</div>
+                    <div class="secondinfo">Rs. 1,299 <del>Rs. 1,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/3.avif" alt="pic3">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Grey Pinstripe Kids Suit</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/4.webp" alt="pic4">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Orange Floral Kids Kurta</div>
+                    <div class="secondinfo">Rs. 1,799 <del>Rs. 2,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/5.jpg" alt="pic5">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Black Embroidered Kids Kurta</div>
+                    <div class="secondinfo">Rs. 3,499 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/6.jpg" alt="pic6">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Royal Blue Kids Formal Suit</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/7.webp" alt="pic7">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Maroon Printed Kids Waistcoat Set</div>
+                    <div class="secondinfo">Rs. 4,299 <del>Rs. 5,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/8.webp" alt="pic8">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">White Floral Kids Casual Shirt</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/9.webp" alt="pic9">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Charcoal Kids Formal Suit</div>
+                    <div class="secondinfo">Rs. 9,299 <del>Rs. 12,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/10.webp" alt="pic10">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Grey Kids Tracksuit Set</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/11.webp" alt="pic11">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Pink Kids Kurta Shalwar</div>
+                    <div class="secondinfo">Rs. 1,599 <del>Rs. 2,599</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/12.webp" alt="pic12">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Blue Superhero Kids Co-ord Set</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/13.jpg" alt="pic13">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Royal Blue Kids Blazer Set</div>
+                    <div class="secondinfo">Rs. 4,299 <del>Rs. 5,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/14.jpg" alt="pic14">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Navy Check Kids Shirt Set</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/15.webp" alt="pic15">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Blue Tropical Kids Shirt</div>
+                    <div class="secondinfo">Rs. 6,799 <del>Rs. 14,599</del> <span>-60%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/16.webp" alt="pic16">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Light Blue Striped Kids Shirt</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-70%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/17.webp" alt="pic17">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Red Gingham Kids Shirt</div>
+                    <div class="secondinfo">Rs. 4,999 <del>Rs. 5,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/18.webp" alt="pic18">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Black Geometric Kids Shirt</div>
+                    <div class="secondinfo">Rs. 5,499 <del>Rs. 10,499</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/19.webp" alt="pic19">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Pink Plaid Kids Casual Shirt</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsBoys/20.jpg" alt="pic20">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Orange Mandarin Collar Kids Shirt</div>
+                    <div class="secondinfo">Rs. 6,599 <del>Rs. 8,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="loadmore">
+        <button id="load">Load More</button>
+    </div>
+    <section id="footer">
+        <div class="footerintro">
+            <img src="/logo/BAIRAN-removebg-preview.png" alt="">
+
+            <p>We are committed to delivering exceptional customer service and ensuring that our customers find the
+                perfect pieces to express their unique style.</p>
+        </div>
+        <div class="quicklinks">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/men.html">Men</a></li>
+                <li><a href="/women.html">Women</a></li>
+                <li><a href="/kids_girls.html">Kids Gils</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <div class="email">
+                <p> <img src="/icons/Mailicon.png" alt="Mail Icon"> official@bairan.com</p>
+            </div>
+            <div class="phone">
+                <p><img src="/icons/phoneicon.png" alt="Phone Icon"> +92 0319 8768059</p>
+            </div>
+            <div class="address">
+                <p><img src="/icons/addressicon.png" alt="Address Icon"> 123 Fashion Street, Style City</p>
+            </div>
+            <div class="timing">
+                <p><img src="/icons/timeicon.png" alt="Time Icon"> Mon-Sat: 11AM - 10PM</p>
+            </div>
+        </div>
+        <div class="linefullbottom"></div>
+
+        <div class="end">
+            <div class="rights">
+                <p> &copy; 2026 BAIRAN | All rights reserved | Nabeel Shahid. </p>
+            </div>
+            <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/nabeel-shah721/"><img src="/icons/linkedinicon.png"
+                        alt="Linked In"></a>
+                <a href="https://www.instagram.com/nabeelshahid636/"><img src="/icons/instagramicon.png"
+                        alt="Instagram"></a>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Product Modal -->
+<div id="productModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModalBtn()">✕</button>
+        <div class="modal-img">
+            <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-details">
+            <h4>BAIRAN</h4>
+            <h3 id="modalName"></h3>
+            <div id="modalPrice" class="modal-price"></div>
+            <div class="quantity-control">
+                <button onclick="changeQty(-1)">−</button>
+                <span id="qtyDisplay">1</span>
+                <button onclick="changeQty(1)">+</button>
+            </div>
+            <button class="modal-add-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+        <div id="cartTotal" class="cart-total"></div>
+         <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+</div>
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+</body>
+
+</html>

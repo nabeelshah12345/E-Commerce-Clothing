@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAIRAN - Kids Girls Collection</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="img">
+            <img src="/logo/BAIRAN-removebg-preview.png" width="200px" alt="BAIRAN Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="/men.html">Men</a></li>
+            <li><a href="/women.html">Women</a></li>
+            <li><a href="/kids_boys.html">Kids Boys</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search Products">
+            <button class="search-btn" onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cart" onclick="toggleCart()">
+            <img src="/icons/5163709.png" width="35px" alt="Cart Icon">
+            <span id="cartCount" class="cart-count">0</span>
+        </div>
+        <div class="login">
+            <a href="/login.html"><button id="loginid">Login</button></a>
+        </div>
+        <div class="Signup">
+            <a href="/signup.html"><button id="signupid">Sign Up</button></a>
+        </div>
+        <div id="logoutDiv">
+            <button id="logoutClick">Logout</button>
+        </div>
+    </div>
+    <section class="girlskids">
+        <div class="bigContainer">
+            <h1>Kids Girls Collection</h1>
+            <p>Explore our collection of kids girls fashion. From casual to formal, we have got you covered. </p>
+        </div>
+        <div class="Products">
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/1.webp" alt="pic1">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Yellow Floral Girls Kurta Set</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/2.webp" alt="pic2">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Pink Girls Co-ord Set</div>
+                    <div class="secondinfo">Rs. 4,999 <del>Rs. 5,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/3.jpg" alt="pic3">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Green Plaid Girls Shirt Dress</div>
+                    <div class="secondinfo">Rs. 1,299 <del>Rs. 3,599</del> <span>-60%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/4.jpg" alt="pic4">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Red Button Girls Shirt Dress</div>
+                    <div class="secondinfo">Rs. 3,299 <del>Rs. 6,599</del> <span>-65%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/5.webp" alt="pic5">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Blue Paisley Girls Frock</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/6.webp" alt="pic6">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Blue Girls T-Shirt Dress</div>
+                    <div class="secondinfo">Rs. 3,299 <del>Rs. 6,599</del> <span>-65%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/7.webp" alt="pic7">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Pink Gathered Girls Top</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/8.avif" alt="pic8">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Black Embroidered Girls Suit</div>
+                    <div class="secondinfo">Rs. 4,999 <del>Rs. 5,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/9.webp" alt="pic9">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Black Smock Girls Dress</div>
+                    <div class="secondinfo">Rs. 3,299 <del>Rs. 6,599</del> <span>-65%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/10.webp" alt="pic10">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Navy Printed Girls Maxi</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/11.avif" alt="pic11">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Mint Floral Ruffle Girls Frock</div>
+                    <div class="secondinfo">Rs. 1,299 <del>Rs. 2,599</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/12.webp" alt="pic12">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Cream Embroidered Girls Maxi</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 3,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/13.jpg" alt="pic13">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Red Embroidered Girls Lehnga</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/14.webp" alt="pic14">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Sky Blue Embroidered Girls Suitt</div>
+                    <div class="secondinfo">Rs. 3,499 <del>Rs. 5,599</del> <span>-45%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/15.jpg" alt="pic15">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Mauve Floral Girls Ball Gown</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/16.webp" alt="pic16">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Turquoise Tulle Girls Party Gown</div>
+                    <div class="secondinfo">Rs. 1,299 <del>Rs. 5,599</del> <span>-85%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/17.jpg" alt="pic17">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Cream Butterfly Girls Froc</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/18.avif" alt="pic18">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Maroon Plaid Girls 3-Piece Set</div>
+                    <div class="secondinfo">Rs. 4,299 <del>Rs. 5,599</del> <span>-15%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/19.jpg" alt="pic19">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Peach Embellished Girls Lehnga</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/KidsGirls/20.webp" alt="pic20">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Pink Net Girls Lehnga Set</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 3,599</del> <span>-25%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <div class="loadmore">
+        <button id="load">Load More</button>
+    </div>
+    <section id="footer">
+        <div class="footerintro">
+            <img src="/logo/BAIRAN-removebg-preview.png" alt="">
+
+            <p>We are committed to delivering exceptional customer service and ensuring that our customers find the
+                perfect pieces to express their unique style.</p>
+        </div>
+        <div class="quicklinks">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/men.html">Men</a></li>
+                <li><a href="/women.html">Women</a></li>
+                <li><a href="/kids_boys.html">Kids Boys</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <div class="email">
+                <p> <img src="/icons/Mailicon.png" alt="Mail Icon"> official@bairan.com</p>
+            </div>
+            <div class="phone">
+                <p><img src="/icons/phoneicon.png" alt="Phone Icon"> +92 0319 8768059</p>
+            </div>
+            <div class="address">
+                <p><img src="/icons/addressicon.png" alt="Address Icon"> 123 Fashion Street, Style City</p>
+            </div>
+            <div class="timing">
+                <p><img src="/icons/timeicon.png" alt="Time Icon"> Mon-Sat: 11AM - 10PM</p>
+            </div>
+        </div>
+        <div class="linefullbottom"></div>
+
+        <div class="end">
+            <div class="rights">
+                <p> &copy; 2026 BAIRAN | All rights reserved | Nabeel Shahid. </p>
+            </div>
+            <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/nabeel-shah721/"><img src="/icons/linkedinicon.png"
+                        alt="Linked In"></a>
+                <a href="https://www.instagram.com/nabeelshahid636/"><img src="/icons/instagramicon.png"
+                        alt="Instagram"></a>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Product Modal -->
+<div id="productModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModalBtn()">✕</button>
+        <div class="modal-img">
+            <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-details">
+            <h4>BAIRAN</h4>
+            <h3 id="modalName"></h3>
+            <div id="modalPrice" class="modal-price"></div>
+            <div class="quantity-control">
+                <button onclick="changeQty(-1)">−</button>
+                <span id="qtyDisplay">1</span>
+                <button onclick="changeQty(1)">+</button>
+            </div>
+            <button class="modal-add-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+        <div id="cartTotal" class="cart-total"></div>
+         <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+</div>
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+</body>
+
+</html>

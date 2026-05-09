@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAIRAN - Signup</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+</head>
+
+<body class="loginbody">
+    <div class="navlogin">
+        <div class="img">
+            <img src="/logo/BAIRAN-removebg-preview.png" width="200px" alt="BAIRAN Logo">
+        </div>
+        <div class="loginhome">
+            <a href="/index.html">Home</a>
+        </div>
+    </div>
+    <div class="mainlogindiv">
+        <div class="containersignup">
+            <div class="log">
+                <h1>Sign Up</h1>
+                <p>Fill in the form below to create your account.</p>
+            </div>
+            <form action="">
+                <div class="signupform">
+                    <div class="mail">
+                        <input id="namesignup"  type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="mail">
+                        <input id="mailsignup" type="email" placeholder="Enter your email">
+                    </div>
+                    <div class="pass">
+                        <input id="passsignup" type="password" placeholder="Enter your password">
+                    </div>
+                    <div class="pass">
+                        <input id="confirmpass" type="password" placeholder="Confirm your password">
+                    </div>
+                    <div class="loginbutton">
+                        <button id="signupop">Sign Up</button>
+                    </div>
+                    <div class="donthaveaccount">
+                        <p>Already have an account? <a href="/login.html">Login</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Product Modal -->
+<div id="productModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModalBtn()">✕</button>
+        <div class="modal-img">
+            <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-details">
+            <h4>BAIRAN</h4>
+            <h3 id="modalName"></h3>
+            <div id="modalPrice" class="modal-price"></div>
+            <div class="quantity-control">
+                <button onclick="changeQty(-1)">−</button>
+                <span id="qtyDisplay">1</span>
+                <button onclick="changeQty(1)">+</button>
+            </div>
+            <button class="modal-add-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+        <div id="cartTotal" class="cart-total"></div>
+         <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+</div>
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAIRAN - Men Collection</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="img">
+            <img src="/logo/BAIRAN-removebg-preview.png" width="200px" alt="BAIRAN Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="/women.html">Women</a></li>
+            <li><a href="/kids_boys.html">Kids Boys</a></li>
+            <li><a href="/kids_girls.html">Kids Girls</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search Products">
+            <button class="search-btn" onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cart" onclick="toggleCart()">
+            <img src="/icons/5163709.png" width="35px" alt="Cart Icon">
+            <span id="cartCount" class="cart-count">0</span>
+        </div>
+        <div class="login">
+            <a href="/login.html"><button id="loginid">Login</button></a>
+        </div>
+        <div class="Signup">
+            <a href="/signup.html"><button id="signupid">Sign Up</button></a>
+        </div>
+        <div id="logoutDiv">
+            <button id="logoutClick">Logout</button>
+        </div>
+    </div>
+    <section class="mens">
+        <div class="bigContainer">
+            <h1>Men Collection</h1>
+            <p>Explore our collection of men's fashion. From casual to formal, we have got you covered. </p>
+        </div>
+        <div class="Products">
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/1.webp" alt="pic1">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Classic Green Linen Kurta</div>
+                    <div class="secondinfo">Rs. 2,299 <del>Rs. 5,599</del> <span>-40%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/2.webp" alt="pic2">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Classic Cream Wedding Sherwani</div>
+                    <div class="secondinfo">Rs. 19,299 <del>Rs. 28,599</del> <span>-15%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/3.jpg" alt="pic3">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Brown Floral Kurta</div>
+                    <div class="secondinfo">Rs. 6,299 <del>Rs. 12,599</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/4.jpeg" alt="pic4">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo"> Dark Royale Party Sherwani</div>
+                    <div class="secondinfo">Rs. 16,699 <del>Rs. 28,599</del> <span>-25%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/5.jpg" alt="pic5">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo"> Premium Badami Kurta</div>
+                    <div class="secondinfo">Rs. 9,199 <del>Rs. 16,199</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/6.jpg" alt="pic6">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo"> Royal Gold Prince Coat</div>
+                    <div class="secondinfo">Rs. 14,699 <del>Rs. 19,599</del> <span>-15%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/8.webp" alt="pic8">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo"> Olive Green Cargo Joggers</div>
+                    <div class="secondinfo">Rs. 6,299 <del>Rs. 8,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/9.avif" alt="pic9">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo"> Military Style Cargo Pants – Navy</div>
+                    <div class="secondinfo">Rs. 4,199 <del>Rs. 7,599</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/10.webp" alt="pic10">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Classic Pleated Formal Trousers</div>
+                    <div class="secondinfo">Rs. 2,199 <del>Rs. 3,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/11.jpg" alt="pic11">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Dark Grey Casual Joggers</div>
+                    <div class="secondinfo">Rs. 3,499 <del>Rs. 5,499</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/12.jpg" alt="pic12">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Tan Brown Formal Pants</div>
+                    <div class="secondinfo">Rs. 2,199 <del>Rs. 3,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/13.webp" alt="pic13">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Relaxed Fit Cargo Denim – Grey</div>
+                    <div class="secondinfo">Rs. 1,499 <del>Rs. 2,499</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/14.webp" alt="pic14">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Classic Contrast Formal Shirt</div>
+                    <div class="secondinfo">Rs. 2,999 <del>Rs. 4,199</del> <span>-47%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/15.jpg" alt="pic15">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Navy Mini Check Casual Shirt</div>
+                    <div class="secondinfo">Rs. 1,499 <del>Rs. 2,499</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/16.webp" alt="pic16">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Royal Blue Satin Slim Fit Shirt</div>
+                    <div class="secondinfo">Rs. 3,499 <del>Rs. 4,499</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/17.webp" alt="pic17">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Black & Grey Color Block Polo</div>
+                    <div class="secondinfo">Rs. 2,199 <del>Rs. 6,199</del> <span>-75%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/18.jpg" alt="pic18">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">White Stag Graphic T-Shirt</div>
+                    <div class="secondinfo">Rs. 2,199 <del>Rs. 3,199</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/19.webp" alt="pic19">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Bold Stripe Cuban Collar Shirt</div>
+                    <div class="secondinfo">Rs. 2,499 <del>Rs. 3,499</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/20.jpg" alt="pic20">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Olive Contrast Cuff Casual Shirt</div>
+                    <div class="secondinfo">Rs. 1,199 <del>Rs. 2,499</del> <span>-60%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/21.jpg" alt="pic21">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Teal Green Formal Dress Shirt</div>
+                    <div class="secondinfo">Rs. 2,399 <del>Rs. 3,199</del> <span>-15%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/22.jpeg" alt="pic22">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Hot Pink Geometric Printed Shirt</div>
+                    <div class="secondinfo">Rs. 7,599 <del>Rs. 9,599</del> <span>-20%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/23.webp" alt="pic23">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Navy Blue Classic Polo T-Shirt</div>
+                    <div class="secondinfo">Rs. 1,199 <del>Rs. 2,499</del> <span>-60%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/24.webp" alt="pic24">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Soft Knit Long Sleeve Polo</div>
+                    <div class="secondinfo">Rs. 1,799 <del>Rs. 2,499</del> <span>-30%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photos">
+                    <img src="/MenCollection/25.webp" alt="pic25">
+                </div>
+                <div class="info">
+                    <h4>BAIRAN</h4>
+                    <div class="firstinfo">Bold Stripe Cotton Polo</div>
+                    <div class="secondinfo">Rs. 1,699 <del>Rs. 2,699</del> <span>-50%</span></div>
+                    <div><button onclick="openModal(this)">Add to Cart</button></div>
+                </div>
+            </div>
+
+
+    </section>
+    <div class="loadmore">
+        <button id="load">Load More</button>
+    </div>
+    <section id="footer">
+        <div class="footerintro">
+            <img src="/logo/BAIRAN-removebg-preview.png" alt="">
+
+            <p>We are committed to delivering exceptional customer service and ensuring that our customers find the
+                perfect pieces to express their unique style.</p>
+        </div>
+        <div class="quicklinks">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/women.html">Women</a></li>
+                <li><a href="/kids_boys.html">Kids Boys</a></li>
+                <li><a href="/kids_girls.html">Kids Girls</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <div class="email">
+                <p> <img src="/icons/Mailicon.png" alt="Mail Icon"> official@bairan.com</p>
+            </div>
+            <div class="phone">
+                <p><img src="/icons/phoneicon.png" alt="Phone Icon"> +92 0319 8768059</p>
+            </div>
+            <div class="address">
+                <p><img src="/icons/addressicon.png" alt="Address Icon"> 123 Fashion Street, Style City</p>
+            </div>
+            <div class="timing">
+                <p><img src="/icons/timeicon.png" alt="Time Icon"> Mon-Sat: 11AM - 10PM</p>
+            </div>
+        </div>
+        <div class="linefullbottom"></div>
+
+        <div class="end">
+            <div class="rights">
+                <p> &copy; 2026 BAIRAN | All rights reserved | Nabeel Shahid. </p>
+            </div>
+            <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/nabeel-shah721/"><img src="/icons/linkedinicon.png"
+                        alt="Linked In"></a>
+                <a href="https://www.instagram.com/nabeelshahid636/"><img src="/icons/instagramicon.png"
+                        alt="Instagram"></a>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Product Modal -->
+<div id="productModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModalBtn()">✕</button>
+        <div class="modal-img">
+            <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-details">
+            <h4>BAIRAN</h4>
+            <h3 id="modalName"></h3>
+            <div id="modalPrice" class="modal-price"></div>
+            <div class="quantity-control">
+                <button onclick="changeQty(-1)">−</button>
+                <span id="qtyDisplay">1</span>
+                <button onclick="changeQty(1)">+</button>
+            </div>
+            <button class="modal-add-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+        <div id="cartTotal" class="cart-total"></div>
+         <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+</div>
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+</body>
+
+</html>
