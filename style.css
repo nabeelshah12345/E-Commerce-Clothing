@@ -1839,3 +1839,17 @@ html {
         font-size: 20px;
     }
 }
+@media (max-width: 450px) {
+    .contMan p{
+        font-size: 18px;
+    }
+    .contwomen p{
+        font-size: 18px;
+    }
+    .contChild p{
+        font-size: 18px;
+    }
+    .contactemail button{
+        width: 100%;
+    }
+}
