@@ -240,9 +240,122 @@ function proceedToCheckout() {
         const price = item.priceValue !== undefined ? item.priceValue : parsePrice(item.price);
         return sum + price * item.qty;
     }, 0);
-    alert(`Proceeding to checkout. Total amount: Rs. ${total.toLocaleString()}\n\nThank you for shopping with BAIRAN!`);
-
+    renderCheckoutForm(total);
 }
+
+function renderCheckoutForm(total) {
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    if (!cartSidebar || !cartOverlay) return;
+
+    // Close sidebar
+    cartSidebar.classList.remove('open');
+    cartOverlay.classList.remove('open');
+
+    // Create checkout overlay
+    let overlay = document.getElementById('checkoutOverlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'checkoutOverlay';
+        overlay.className = 'checkout-overlay';
+        overlay.onclick = function(e) {
+            if (e.target === overlay) closeCheckout();
+        };
+        document.body.appendChild(overlay);
+    }
+
+    overlay.innerHTML = `
+        <div class="checkout-content">
+            <button class="modal-close" onclick="closeCheckout()" style="position:absolute;top:12px;right:12px;border:none;background-color:#413923;color:white;border-radius:50%;width:32px;height:32px;cursor:pointer;">✕</button>
+            <div class="checkout-form-wrap">
+                <h3>Checkout Details</h3>
+                <p>Please enter your information and delivery address.</p>
+                <div class="checkout-summary">Order Total: <strong>Rs. ${total.toLocaleString()}</strong></div>
+                <form id="checkoutForm" class="checkout-form" onsubmit="confirmOrder(event)">
+                    <label>
+                        Full Name
+                        <input type="text" id="checkoutName" placeholder="Enter your full name" required>
+                    </label>
+                    <label>
+                        Phone Number
+                        <input type="tel" id="checkoutPhone" placeholder="Enter your phone number" required>
+                    </label>
+                    <label>
+                        Email Address
+                        <input type="email" id="checkoutEmail" placeholder="Enter your email" required>
+                    </label>
+                    <label>
+                        Delivery Address
+                        <textarea id="checkoutAddress" rows="4" placeholder="House number, street, area" required></textarea>
+                    </label>
+                    <label>
+                        City
+                        <input type="text" id="checkoutCity" placeholder="Enter your city" required>
+                    </label>
+                    <div class="checkout-actions">
+                        <button type="button" class="checkout-back-btn" onclick="closeCheckout()">Back to Cart</button>
+                        <button type="submit" class="confirm-order-btn">Confirm Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>`;
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout() {
+    const overlay = document.getElementById('checkoutOverlay');
+    if (overlay) {
+        overlay.classList.remove('active');
+    }
+    document.body.style.overflow = '';
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    if (cartSidebar && cartOverlay) {
+        cartSidebar.classList.add('open');
+        cartOverlay.classList.add('open');
+    }
+}
+
+function confirmOrder(event) {
+    event.preventDefault();
+    const form = document.getElementById('checkoutForm');
+    if (!form) return;
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+    const customerName = document.getElementById('checkoutName').value.trim();
+    cart = [];
+    saveCart();
+    updateCartCount();
+    const overlay = document.getElementById('checkoutOverlay');
+    if (overlay) {
+        overlay.innerHTML = `
+            <div class="checkout-content">
+                <div class="order-success">
+                    <div class="order-success-icon">✓</div>
+                    <h3>Your order is confirmed!</h3>
+                    <p>Thank you${customerName ? ', ' + customerName : ''}. Your order has been confirmed.</p>
+                    <p>We will send you the delivery details and updates soon.</p>
+                    <button class="checkout-btn" onclick="closeCheckoutAndContinue()" style="margin-top:16px;padding:12px 32px;border:none;background-color:#413923;color:white;border-radius:12px;cursor:pointer;font-size:15px;font-weight:bold;">Continue Shopping</button>
+                </div>
+            </div>`;
+    }
+    showToast('Order confirmed successfully!');
+}
+
+function closeCheckoutAndContinue() {
+    closeCheckout();
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    if (cartSidebar && cartOverlay) {
+        cartSidebar.classList.add('open');
+        cartOverlay.classList.add('open');
+    }
+}
+
 
 // Show toast notification
 function showToast(msg) {
